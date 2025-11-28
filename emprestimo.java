@@ -16,8 +16,8 @@ public class Emprestimo {
     }
 
     // Getters e Setters
-    public int getId() { return id; }
-    public Usuario getUsuario() { return usuario; }
+    public int getId() { return id;}
+    public Usuario getUsuario() { return usuario;}
     public ItemAcervo getItem() { return item; }
     public LocalDate getDataEmprestimo() { return dataEmprestimo; }
     public LocalDate getDataDevolucao() { return dataDevolucao; }

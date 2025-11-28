@@ -25,13 +25,13 @@ public class Biblioteca {
             String password = "password";
             conn = DriverManager.getConnection(url, user, password);
             System.out.println("Conectado ao MySQL!");
-        } catch (SQLException e) {
+        } catch (SQLException e){
             e.printStackTrace();
         }
     }
 
     // Carregar dados (igual ao original)
-    private void carregarDados() {
+    private void carregarDados(){
         try {
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM livros");

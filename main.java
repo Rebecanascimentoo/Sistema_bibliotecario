@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Biblioteca biblioteca = new Biblioteca();
         Scanner scanner = new Scanner(System.in);
         Usuario usuarioAtual = null; // Usuário atual para simulação de sessão
