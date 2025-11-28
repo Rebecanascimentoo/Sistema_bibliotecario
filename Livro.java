@@ -6,8 +6,15 @@ public class Livro extends ItemAcervo {
         this.genero = genero;
     }
 
+    public String getGenero() {
+        return genero;
+    }
+
     @Override
     public void exibirDetalhes() {
-        System.out.println("Livro: " + getTitulo() + " | Autor: " + getAutor() + " | Gênero: " + genero + " | Disponível: " + isDisponivel());
+        System.out.println("Livro: " + getTitulo() +
+                " | Autor: " + getAutor() +
+                " | Gênero: " + genero +
+                " | Disponível: " + isDisponivel());
     }
 }
