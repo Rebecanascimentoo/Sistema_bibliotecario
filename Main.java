@@ -31,13 +31,17 @@ public class Main {
                 switch (opcao) {
 
                     case 1:
-                        System.out.print("ID do usuário: ");
-                        int id = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.print("Nome do usuário: ");
-                        String nome = scanner.nextLine();
-                        usuarioAtual = new Usuario(id, nome);
-                        System.out.println("Usuário ativo: " + nome);
+                        try {
+                            System.out.print("ID do usuário: ");
+                            int id = scanner.nextInt();
+                            scanner.nextLine();
+                            System.out.print("Nome do usuário: ");
+                            String nome = scanner.nextLine();
+                            usuarioAtual = new Usuario(id, nome);
+                            System.out.println("Usuário ativo: " + nome);
+                        } catch (IllegalArgumentException e) {
+                            System.out.println("Erro: " + e.getMessage());
+                        }
                         break;
 
                     case 2:

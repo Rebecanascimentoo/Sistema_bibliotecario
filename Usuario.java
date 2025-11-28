@@ -7,9 +7,19 @@ public class Usuario {
     private String nome;
     private List<String> historico = new ArrayList<>();
 
-    public Usuario(int id, String nome) {
+    public Usuario(int id, String nome) throws IllegalArgumentException {
+        validarNome(nome);
         this.id = id;
         this.nome = nome;
+    }
+
+    private void validarNome(String nome) throws IllegalArgumentException {
+        if (nome == null || nome.trim().isEmpty()) {
+            throw new IllegalArgumentException("Nome não pode estar vazio!");
+        }
+        if (!nome.matches("[a-záàâãéèêéíïóôõöúçñA-ZÁÀÂÃÉÈÊÉÍÏÓÔÕÖÚÇÑ\\s]+")) {
+            throw new IllegalArgumentException("Nome deve conter apenas letras e espaços!");
+        }
     }
 
     public String getNome() {
